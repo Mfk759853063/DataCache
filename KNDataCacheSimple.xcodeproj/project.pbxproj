@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF67CEA31C4398C100DD3193 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = AF67CEA21C4398C100DD3193 /* test.png */; };
 		AFA65B401C3FA2C800CCCC0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA65B3F1C3FA2C800CCCC0B /* main.m */; };
 		AFA65B431C3FA2C800CCCC0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA65B421C3FA2C800CCCC0B /* AppDelegate.m */; };
 		AFA65B461C3FA2C800CCCC0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA65B451C3FA2C800CCCC0B /* ViewController.m */; };
 		AFA65B491C3FA2C800CCCC0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA65B471C3FA2C800CCCC0B /* Main.storyboard */; };
 		AFA65B4B1C3FA2C800CCCC0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA65B4A1C3FA2C800CCCC0B /* Assets.xcassets */; };
 		AFA65B4E1C3FA2C800CCCC0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA65B4C1C3FA2C800CCCC0B /* LaunchScreen.storyboard */; };
+		AFA65B581C3FA9C000CCCC0B /* KNCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA65B571C3FA9C000CCCC0B /* KNCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF67CEA21C4398C100DD3193 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		AFA65B3B1C3FA2C700CCCC0B /* KNDataCacheSimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KNDataCacheSimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA65B3F1C3FA2C800CCCC0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AFA65B411C3FA2C800CCCC0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,8 @@
 		AFA65B4A1C3FA2C800CCCC0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFA65B4D1C3FA2C800CCCC0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFA65B4F1C3FA2C800CCCC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA65B561C3FA9C000CCCC0B /* KNCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNCache.h; sourceTree = "<group>"; };
+		AFA65B571C3FA9C000CCCC0B /* KNCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +63,13 @@
 		AFA65B3D1C3FA2C800CCCC0B /* KNDataCacheSimple */ = {
 			isa = PBXGroup;
 			children = (
+				AFA65B551C3FA99600CCCC0B /* KNCache */,
 				AFA65B411C3FA2C800CCCC0B /* AppDelegate.h */,
 				AFA65B421C3FA2C800CCCC0B /* AppDelegate.m */,
 				AFA65B441C3FA2C800CCCC0B /* ViewController.h */,
 				AFA65B451C3FA2C800CCCC0B /* ViewController.m */,
 				AFA65B471C3FA2C800CCCC0B /* Main.storyboard */,
+				AF67CEA21C4398C100DD3193 /* test.png */,
 				AFA65B4A1C3FA2C800CCCC0B /* Assets.xcassets */,
 				AFA65B4C1C3FA2C800CCCC0B /* LaunchScreen.storyboard */,
 				AFA65B4F1C3FA2C800CCCC0B /* Info.plist */,
@@ -77,6 +84,15 @@
 				AFA65B3F1C3FA2C800CCCC0B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFA65B551C3FA99600CCCC0B /* KNCache */ = {
+			isa = PBXGroup;
+			children = (
+				AFA65B561C3FA9C000CCCC0B /* KNCache.h */,
+				AFA65B571C3FA9C000CCCC0B /* KNCache.m */,
+			);
+			path = KNCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +155,7 @@
 				AFA65B4E1C3FA2C800CCCC0B /* LaunchScreen.storyboard in Resources */,
 				AFA65B4B1C3FA2C800CCCC0B /* Assets.xcassets in Resources */,
 				AFA65B491C3FA2C800CCCC0B /* Main.storyboard in Resources */,
+				AF67CEA31C4398C100DD3193 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA65B461C3FA2C800CCCC0B /* ViewController.m in Sources */,
+				AFA65B581C3FA9C000CCCC0B /* KNCache.m in Sources */,
 				AFA65B431C3FA2C800CCCC0B /* AppDelegate.m in Sources */,
 				AFA65B401C3FA2C800CCCC0B /* main.m in Sources */,
 			);
@@ -300,6 +318,7 @@
 				AFA65B541C3FA2C800CCCC0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
