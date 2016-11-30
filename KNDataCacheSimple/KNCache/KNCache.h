@@ -21,6 +21,10 @@ typedef void(^KNCacheCompletionDataBlock)(id data);
 
 - (id)dataForKey:(NSString *)key;
 
+- (id)dataFromDiskWithKey:(NSString *)key;
+
+- (void)deleteDataForKey:(NSString *)key;
+
 - (void)clearDataWithCompletionBlock:(KNCacheCompletionVoidBlock)completion;
 
 - (void)getSizeWithCompletionBlock:(KNCacheCompletionDataBlock)completion;

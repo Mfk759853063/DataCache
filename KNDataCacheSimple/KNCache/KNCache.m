@@ -8,8 +8,8 @@
 
 #import "KNCache.h"
 #import "UIKit/UIKit.h"
-// 一个月
-static const NSInteger kDefaultCacheMaxAge = 60 * 60 *24 * 7 * 4;
+// 一年
+static const NSInteger kDefaultCacheMaxAge = 60 * 60 *24 * 7 * 52;
 
 @interface KNCache ()
 
@@ -144,6 +144,20 @@ static const NSInteger kDefaultCacheMaxAge = 60 * 60 *24 * 7 * 4;
     });
 }
 
+#pragma mark - delete
+
+- (void)deleteDataForKey:(NSString *)key {
+    if (key) {
+        [self.memoryCache removeObjectForKey:key];
+    }
+    dispatch_async(self.ioQueue, ^{
+        NSString *filePath = [self cacheFileName:key inDiskPath:self.diskPath];
+        if (filePath) {
+            [self.fileManager removeItemAtPath:filePath error:nil];
+        }
+    });
+}
+
 #pragma mark - store
 
 - (void)saveData:(id)data forKey:(NSString *)key {
@@ -151,7 +165,7 @@ static const NSInteger kDefaultCacheMaxAge = 60 * 60 *24 * 7 * 4;
 }
 
 - (void)saveData:(id)data forKey:(NSString *)key useBlock:(KNCacheCompletionVoidBlock)completion {
-    [self saveData:data forKey:key useBlock:completion];
+    [self saveData:data forKey:key completion:completion toDisk:YES];
 }
 
 - (void)saveData:(id<NSCoding>)data forKey:(NSString *)key completion:(KNCacheCompletionVoidBlock)completion toDisk:(BOOL)toDisk {
